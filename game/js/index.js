@@ -112,10 +112,11 @@ class Player{
 
     if (x <= 5 && x > -5 && y <= 5 && y > -5) {
       
-      stop.question(this);
+      
+      if (Player.obs[Player.obs.length-1] == stop) p.gameEnd();
+      else stop.question(this);
       this.stopCount++;
       this.stop();
-      if (Player.obs[Player.obs.length-1] == stop) p.gameEnd();
     }
   }
 
