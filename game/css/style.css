@@ -1,0 +1,238 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  margin: auto;
+  width: 980px;
+  height: 630px;
+  background-image: url(../img/map.jpg);
+  position: relative;
+  overflow: hidden;
+}
+
+.way-box{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 22px;
+  left: 79px;
+}
+
+.way{
+  width: 891px;
+  height: 519px;
+  position: relative;
+  z-index: -1;
+}
+
+.player{
+  position: absolute;
+  offset-rotate: 0deg;
+  /* animation: move-along 30000ms 0ms 1 alternate linear both; */
+  offset-anchor: center center;
+  z-index: 2;
+  height: 70px;
+  top: -190px;
+  left: 0;
+}
+
+
+@keyframes move-along {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.navigation{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.navigation-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 80px;
+}
+
+.sprite{
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.navigation__friends-list{
+  width: 536px;
+  height: 63px;
+  background-position: -1px -54px;
+}
+
+.navigation__chat{
+  width: 67px;
+  height: 62px;
+  background-position: -1px -119px;
+}
+
+.navigation__chat:hover{
+  width: 67px;
+  height: 62px;
+  background-position: -70px -119px;
+}
+
+.navigation__activate{
+  width: 206px;
+  height: 67px;
+  background-position: -267px -245px;
+}
+
+.activate-navigation-element{
+  filter: contrast(100%);
+  transition: filter .087s linear;
+}
+
+.activate-navigation-element:hover{
+  filter: contrast(120%);
+}
+
+.activate-navigation-element:active{
+  filter: contrast(150%);
+}
+
+.navigation__mail{
+  width: 68px;
+  height: 64px;
+  background-position: -139px -119px;
+}
+
+.navigation__rating{
+  width: 66px;
+  height: 61px;
+  background-position: -209px -119px;
+}
+
+.points,.resultPoints,.complexity,.time,.lateness{
+  box-sizing: border-box;
+  width: 100px;
+  line-height: 40px;
+  background-color: #00b2c1;
+  border: 5px solid #007990;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  font-family: sans-serif;
+  z-index: 8;
+}
+
+.time{
+  top: 10px;
+  left: 100%;
+  transform: translateX(calc(-100% - 15px));
+}
+
+.resultPoints,.complexity{
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  height: 150px;
+  transform: translate(-50%,-50%);
+  font-family: 'Petemoss', cursive;
+  font-size: 64px;
+  padding: 15px;
+}
+
+.resultPoints-box{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(82,77,80,.5);
+  display: none;
+  z-index: 9;
+}
+
+.resulpPoints__con{
+  margin-bottom: 20px;
+  color: #300098;
+}
+
+.resultPoints__point{
+  font-size: 28px;
+}
+
+.resultPoints__point span{
+  font-size: 52px;
+}
+
+.complexity-box{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(82,77,80,.5);
+  /* display: none; */
+  z-index: 9;
+}
+
+.lateness-box{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(82,77,80,.5);
+  z-index: 12;
+  display: none;
+}
+
+.lateness{
+  box-sizing: border-box;
+  width: 300px;
+  background-color: #c10000;
+  border: 5px solid #ff6c00;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.complexity{
+  box-sizing: border-box;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.complexity input{
+  display: none;
+}
+
+.complexity p label:hover{
+  cursor: pointer;
+}
+
+.complexity p:nth-child(1) label:hover{
+  color: greenyellow;
+}
+
+.complexity p:nth-child(2) label:hover{
+  color: gold;
+}
+
+.complexity p:nth-child(3) label:hover{
+  color: crimson;
+}
