@@ -29,7 +29,7 @@ if(control('reviewsSlider') && control('faq__list')) {
       popUp = document.querySelector('.pop-up'),
       popUpClose = popUp.querySelector('.pop-up__btn'),
       popData = popUp.querySelector('.pop-up__img'),
-      license = document.querySelector('.progress__element .element__description .description__btn'),
+      // license = document.querySelector('.progress__element .element__description .description__btn'),
       certificate = document.querySelector('.confidence__steps .item__description .description__btn'),
       reviews = document.querySelectorAll('.confidence__reviews .list__item .item__link');
 
@@ -45,9 +45,9 @@ if(control('reviewsSlider') && control('faq__list')) {
     popData.setAttribute('alt', alt);
   };
 
-  license.addEventListener("click", function(){
-    popUpActivation(this)
-  });
+  // license.addEventListener("click", function(){
+  //   popUpActivation(this)
+  // });
   certificate.addEventListener("click", function(){
     popUpActivation(this)
   });
